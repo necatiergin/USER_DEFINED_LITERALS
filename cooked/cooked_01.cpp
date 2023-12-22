@@ -22,6 +22,11 @@ constexpr double operator"" _km(long double val)
 int main()
 {
 	constexpr double length = 2.3_km + 34.98_m + 54312._cm + 123456._mm;
-	
+
 	//...
+
+	auto rt1 = operator"" _m(2.3);
+	auto rt2 = operator"" _cm(2.3);
+	auto rt3 = operator"" _mm(2.3);
+	auto rt4 = operator"" _km(2.3);
 }
