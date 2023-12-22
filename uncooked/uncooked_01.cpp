@@ -29,5 +29,5 @@ int main() try
 }
 catch (const std::exception& e)
 {
-	std::cerr << "hata yakalandi: " << e.what() << "\n";
+	std::cerr << "hata yakalandi: " << e.what() << '\n';
 }
