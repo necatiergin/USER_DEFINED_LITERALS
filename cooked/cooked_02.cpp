@@ -1,4 +1,4 @@
-//cooked usef defined literals
+//cooked user defined literals
 
 constexpr double operator"" _c(long double fdegrees)
 {
