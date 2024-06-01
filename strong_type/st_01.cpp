@@ -9,7 +9,8 @@ public:
     explicit constexpr operator double()const { return mts; }
 };
 
-constexpr Meters operator""_m(long double m){
+constexpr Meters operator""_m(long double m) 
+{
     return Meters(Meters::PreventUsage(), static_cast<double>(m));
 }
 
@@ -26,5 +27,5 @@ int main()
 
     m = 2.5_m;
 
-    std::cout << m << "\n";
+    std::cout << m << '\n';
 }
