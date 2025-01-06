@@ -7,7 +7,7 @@ unsigned int operator"" _b(const char* p)
 	while (*p) {
 		char digit = *p;
 		if (digit != '1' && digit != '0') {
-			throw std::runtime_error("0 ya da 1 olmayan karakter\n");
+			throw std::runtime_error("invalid character\n");
 		}
 
 		uval = uval * 2 + (digit - '0');
@@ -24,7 +24,7 @@ int main() try
 
 	std::cout << "uval1 = " << uval1 << '\n';
 
-	unsigned uval2 = 124_b; //exception gonderecek
+	unsigned uval2 = 124_b; //throws exception
 	std::cout << "uval2 = " << uval1 << '\n';
 }
 catch (const std::exception& e)
