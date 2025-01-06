@@ -10,5 +10,5 @@ int main()
 {
     constexpr auto rad = 180._deg_to_rad;
 
-    std::cout << "rad = " << rad << "\n";
+    std::cout << "rad = " << rad << '\n';
 }
