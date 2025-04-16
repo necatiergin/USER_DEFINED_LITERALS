@@ -1,18 +1,17 @@
-#include <iostream>
-
 template<char... Chars>
-constexpr unsigned operator"" _bin() 
+constexpr unsigned operator"" _bin()
 {
     constexpr char str[] = { Chars..., '\0' };
     unsigned int value = 0;
-    for (char c : str) {
-        if (c == '1')
-            value = value * 2 + 1;
+    for (int i = 0; str[i] != '\0'; ++i) {
+        value = value * 2 + str[i] - '0';
     }
     return value;
 }
 
-int main() 
+int main()
 {
-    constexpr auto b = 1010011_bin;
+    constexpr auto b = 1111_bin;
+
+    std::cout << b << '\n';
 }
