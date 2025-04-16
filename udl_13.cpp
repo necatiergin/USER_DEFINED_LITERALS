@@ -1,3 +1,6 @@
+#include <iostream>
+
+
 template<char... Chars>
 constexpr unsigned operator"" _bin()
 {
@@ -11,7 +14,10 @@ constexpr unsigned operator"" _bin()
 
 int main()
 {
-    constexpr auto b = 1111_bin;
+    constexpr auto b1 = 1111_bin;
 
-    std::cout << b << '\n';
+    constexpr auto b2 = operator""_bin<'1', '0', '1', '0'>();
+    
+    std::cout << b1 << '\n';
+    std::cout << b2 << '\n';
 }
